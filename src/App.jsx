@@ -9,7 +9,11 @@ import NotFound from './pages/NotFound/NotFound';
 
 function App() {
 	return (
-		<BrowserRouter>
+		/* basename="/portfolio" — это КЛЮЧЕВАЯ настройка. 
+      Она говорит роутеру, что главная страница находится по адресу /portfolio/, 
+      а не в корне сайта.
+    */
+		<BrowserRouter basename='/portfolio'>
 			<Routes>
 				<Route element={<Layout />}>
 					<Route path='/' element={<About />} />
